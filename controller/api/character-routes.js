@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const Character = require('../../model/Character');
+const {Character, Combo, Move} = require('../../model');
 
 //Get all characters from database
 router.get('/', async (req,res) => {
-    try{
+    try {
         const charData = await Character.findAll();
         const rawCharData = charData.get({ plain:true });
 
         res.status(200).json(rawCharData);
-    }catch(err) {
+    } catch(err) {
         res.status(500).send(err);
     }
 });
@@ -16,16 +16,19 @@ router.get('/', async (req,res) => {
 //Get one character from database
 
 router.get('/:charName', async (req,res) => {
-    try{
-        const charData = await Character.findOne({
-            where: {
-                name: req.params.charName
+    try {
+        const charData = await Character.findOne(
+            {
+                where: {
+                    name: req.params.charName
+                },
+                include: [Move, Combo]
             }
-        });
+        );
         const rawCharData = charData.get({ plain:true });
 
         res.status(200).json(rawCharData);
-    }catch(err) {
+    } catch(err) {
         res.status(500).send(err);
     }
 })

@@ -19,6 +19,9 @@ Combo.init(
       allowNull: false,
       get () {
         return JSON.parse(this.getDataValue('sequence'));
+      },
+      set (val) {
+        this.setDataValue('sequence', JSON.stringify(val));
       }
     },
     //A description of any particularities of the combo that bear noting. Optional.
