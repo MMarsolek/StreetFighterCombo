@@ -1,37 +1,28 @@
 const Character = require('./Characters');
-const ComboMove = require('./ComboMoves');
 const Combo = require('./Combos');
 const Move = require('./Moves');
 const User = require('./Users');
 
+// We're 
 User.hasMany(Combo);
 Combo.belongsTo(User, {
-    foreignKey: 'userId',
-    onDelete: 'CASCADE'
+    onDelete: 'SET NULL'
 });
 
-Combo.hasMany(ComboMove);
-ComboMove.belongsTo(Combo, {
-    foreignKey: 'comboId',
+Character.hasMany(Combo);
+Combo.belongsTo(Character, {
     onDelete: 'CASCADE'
 });
 
 Character.hasMany(Move);
 Move.belongsTo(Character, {
-    foreignKey: 'characterId',
     onDelete: 'CASCADE'
 });
 
-Move.hasMany(ComboMove);
-ComboMove.belongsTo(Move, {
-    foreignKey: 'moveId',
-    onDelete: 'CASCADE'
-});
 
 module.exports = {
     Character,
     Combo,
-    ComboMove,
     Move,
     User
 }
