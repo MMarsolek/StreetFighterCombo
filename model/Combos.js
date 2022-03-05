@@ -15,7 +15,7 @@ Combo.init(
     // '[{"image":"linkToImage1","name":"moveName1"},{"image":"linkToImage2","name":"moveName2"},{"image":"linkToImage3","name":"moveName3","input":"input3"}]'
     // And it's going to have a getter function that returns that array
     sequence: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.STRING,
       allowNull: false,
       get () {
         return JSON.parse(this.getDataValue('sequence'));
