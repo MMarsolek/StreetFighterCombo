@@ -15,11 +15,11 @@ async function setKeys(){
     return;
 }
 
-async function getToken(){
+async function getToken(data){
     
     //Get token
     const jwt = await new jose.SignJWT( 
-        {quote: 'It’s a dangerous business, Frodo, going out your door.'}
+        {metadata: data}
         )
         .setProtectedHeader({ alg: 'PS256' })
         .setIssuedAt()
@@ -36,26 +36,26 @@ async function getToken(){
 
 //Decrypts the passed in tokens
 async function decryptToken(token){
-    try{
     const decryptedToken = await jose.jwtVerify(token, publicKey, {
         issuer,
         audience
     }) 
     return decryptedToken;
-    }catch(err){
-        return false;
-    }
+
 }
 
 
 
-//Runs all functions to ensure they are working properly
-async function test(){
-    await setKeys();
-    const token = await getToken();
-    const response = await decryptToken(token);
-}
+// Runs all functions to ensure they are working properly
+// async function test(){
+//     await setKeys();
+//     const token = await getToken('Hello! This is a test of the token system');
+//     console.log(token);
+//     const response = await decryptToken(token);
+//     console.log(response);
+// }
 
-test();
+
+// test();
 
 module.exports = { setKeys, getToken, decryptToken}

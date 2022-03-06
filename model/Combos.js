@@ -11,6 +11,19 @@ Combo.init(
       type: DataTypes.STRING,         
       allowNull: false
     },
+    // OK, so this is going to take a stringified array of objects, like this one:
+    // '[{"image":"linkToImage1","name":"moveName1"},{"image":"linkToImage2","name":"moveName2"},{"image":"linkToImage3","name":"moveName3","input":"input3"}]'
+    // And it's going to have a getter function that returns that array
+    sequence: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      get () {
+        return JSON.parse(this.getDataValue('sequence'));
+      },
+      set (val) {
+        this.setDataValue('sequence', JSON.stringify(val));
+      }
+    },
     //A description of any particularities of the combo that bear noting. Optional.
     notes: {
       type: DataTypes.STRING
