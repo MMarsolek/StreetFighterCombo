@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const Combos = require('../../model/Combos');
 const Translator = require('../../utils/comboTranslator')
+const oAuth = require('../../utils/token');
+const auth = require('../../utils/auth');
+const filter =require('../../utils/filter')
 
 //Get all combo from database
 router.get('/', async (req, res) => {
@@ -35,8 +38,13 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     try {
+        const token = req.session.user.token;
+        if (!oAuth.decryptToken(token)){
+            res.redirect("/login");
+        }
+        req.body.notes = filter(req.body.notes);
         const newCombo = await Combos.create(req.body);
         res.status(200).json(newCombo);
     } catch (err) {
@@ -44,6 +52,21 @@ router.post('/', async (req, res) => {
         res.status(500).send(err);
     }
 });
+
+router.delete('/:id', auth, async (req, res) => {
+    try {
+        await Combos.destroy({
+            where: {
+                id: req.params.id
+            },
+        });
+        res.status(200).json();
+    } catch(err){
+        console.log(err);
+        res.status.json(500).json(err)
+    }
+});
+
 
 
 module.exports = router;

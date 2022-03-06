@@ -1,4 +1,5 @@
 const path = require('path');
+const oAuth = require('./utils/token')
 const express = require('express');
 const session = require('express-session');
 
@@ -12,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sess = {
-    secret: 'Our Super Secret Password',
+    secret: 'ThisIsOutSecret',
     cookie: {maxAge: 1000*60*10},
     resave : false,
     saveUnitialized: true,
@@ -20,6 +21,8 @@ const sess = {
         db: sequelize
     })
 };
+
+oAuth.setKeys();
 
 app.use(session(sess)); 
 
