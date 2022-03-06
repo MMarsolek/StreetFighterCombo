@@ -1,4 +1,5 @@
 const path = require('path');
+const oAuth = require('./utils/token')
 const express = require('express');
 const session = require('express-session');
 const routes = require('./controller');
@@ -16,6 +17,8 @@ const sess = {
         db: sequelize
     })
 };
+
+oAuth.setKeys();
 
 app.use(session(sess)); 
 

@@ -21,14 +21,17 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
+    "diffie-hellman": "^5.0.3",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
+    "jose": "^4.5.3",
     "jquery": "^3.6.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "node": "^17.4.0",
     "nodemon": "^2.0.15",
-    "sequelize": "^6.17.0"
+    "sequelize": "^6.17.0",
+    "webcrypto": "^0.1.1"
   }
 }

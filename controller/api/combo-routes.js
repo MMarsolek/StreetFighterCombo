@@ -22,7 +22,7 @@ router.get('/:id', async (req,res) => {
                 _id: req.params.id
             }
         });
-        const rawCombosData = comboData.get({ plain:true });
+        const rawCombosData = comboData.get();
 
         res.status(200).json(rawCombosData);
     }catch(err) {
