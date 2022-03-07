@@ -1,0 +1,272 @@
+[
+    {
+        "name": "Ryu",
+        "moniker": "Eternal Wanderer",
+        "description": "The main protagonist of Street Fighter and one of the most recognizable characters in fighting games, Ryu is an all arounder, beginner friendly character. Ryu has more than solid tools for nearly everything - zoning capabilities, pressure and mixup options, poking, anti airing and frame trapping, corner carry and damage, as well as defensive options.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/ive3Rq1.png"
+    },
+    {
+        "name": "Ken",
+        "moniker": "The Fire-Breathing Fist",
+        "description": "Ken needs little introduction. One of the two famous 'shotos', he's a beginner-friendly character. A bit unlike in the past, his tools are now more directly oriented towards rushdown, and is now more easily seperatable from Ryu in terms of gameplay. He has a slowish fireball and bad pokes, but instead has great corner carry, great mobility, solid damage and some of the better v-meter building in the game.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/8gxMXwm.png"
+    },
+    {
+        "name": "Chun-Li",
+        "moniker": "Blue Jade",
+        "description": "The first lady of fighting games, Chun is another one of the more beginner-friendly characters in the game, as well as one of the consistently better characters in the game. Chun is your classic \"Footsies\" character - focusing on a patient neutral game where one attempts to control the space around him, poke in the opponent's space while simultaniously punish the opponent if they get into your space. Chun has great normals, both pokes, anti airs, and ways to punish the opponent for whiffing attacks or not blocking your incoming pokes.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/GSAUQbs.png"
+    },
+    {
+        "name": "Guile",
+        "moniker": "Air Slasher",
+        "description": "Guile is a fireball zoning character, but his toolkit is flexible enough to allow him to be played in a variety of ways. He's amazing at space control thanks to his far-reaching normals and his sonic boom, which is probably the best fireball in Street Fighter V, his anti-airs are excellent, and his movespeed is great.",
+        "portrait": "https://i.imgur.com/ViPPHBY.png"
+    },
+    {
+        "name": "Nash",
+        "moniker": "Paradoxical Avenger",
+        "description": "Nash is a slow pace, space control based character. He has a slow walk, but fast dash, and relies a lot on keeping the opponent at the perfect distance so he can pester them with booms, scythes, and pokes. Despite having bad walk speed, he can get around somewhat easily, thanks to his movement based V-Triggers, fast dashes and tricky movement options like his moonsaults.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/gO8os0i.png"
+    },
+    {
+        "name": "M. Bison",
+        "moniker": "Emperor of Evil",
+        "description": "Bison is an explosive character defined by his dominant range, sticky pressure, and high damage output. His movement is slow and linear, with the 2nd slowest walkspeed in the game and a long but slow dash. In exchange, he has excellent reach on his normals and strong movement and frame data on some attacks, with safe moves like Scissor Kick, Devil's Reverse, and Psycho Axe moving him forward into his offensive range.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/9SPHtMs.png"
+    },
+    {
+        "name": "Cammy",
+        "moniker": "Techniques of Incomparable Precision",
+        "description": "Cammy is a rushdown, pressure heavy character in its purest form. She doesn't have an overhead, but her frame data and tick throws are threatening enough to make anyone scared of her. Her great walk speed, dash speed, midscreen oki, and her signature dive kick make her hard to keep out, and even harder to get out if she's already found her way in.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/QKVPRxU.png"
+    },
+    {
+        "name": "Birdie",
+        "moniker": "Headbutt Happy Glutton",
+        "description": "Birdie is considered the defensive grappler of Street Fighter V. His stand MP is one of the longest ranged cancelable buttons, his stand HK has a fantastic hitbox that extends past his hurtbox and is a crush counter, stand HP is one of the longest ranged buttons in the game, and his chain can be used to grab people at a distance even through projectiles.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/RJN2toC.png"
+    },
+    {
+        "name": "Necalli",
+        "moniker": "Soul-Consuming Darkness",
+        "description": "One of the new challengers in Street Fighter V, Necalli is out to devour the souls of anyone who stands in his way. He shares some similarities with shoto characters, but has a charge special that goes through projectiles, and an unusual projectile of his own. When he starts out, he is a bit on the slow side, but packs a mean punch. When he enters his unique V-Trigger state, however, he becomes an absolute monster.\n - r/streetfighter",
+        "portrait": "https://i.imgur.com/PyKzzlI.png"
+    },
+    {
+        "name": "Vega",
+        "moniker": "The Sweet Whisper of Death",
+        "description": "Vega is a \"stance\" character whose moveset changes depending on whether or not he has his claw equipped. Without his claw, Vega has access to different punch normals and different special moves, losing access to his Aurora Spin edge but gaining a command grab. The properties of his Flying Barcelona Attack also change. With the claw on, it causes a knockdown; however without it, it leaves the opponent standing for a combo. Also, if Vega takes enough damage while his claw is out, he will lose his claw and be in no claw stance for the rest of the round.",
+        "portrait": "https://i.imgur.com/DNREbrF.png"
+    },
+    {
+        "name": "R. Mika",
+        "moniker": "7 Colored Bomber",
+        "description": "To put it simply. Mika is annoying. She loves harassing the opponent with her great normals, a command grab that loops into itself, and great mobility. Mika has a vast variety of tools to keep the opponent on their toes and make sure they aren't falling asleep. Although her damage output isn't remarkable, this is more than made up for by the fact that her moveset is designed to annoy your opponent with fast and long ranged normals.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/ig33Elm.png"
+    },
+    {
+        "name": "Rashid",
+        "moniker": "A Friend Indeed",
+        "description": "A newcomer to the franchise, Rashid of the Turbulent Wind brings with him agility, swiftness and some uneasy humor. He's a nimble and elusive character with some interesting mixups, an unorthodox projectile and interesting synergies with his V-trigger, but he's not as easy to pick up as some other characters and his damage output isn't great. If you're into mobile characters who like to be all over the screen, you should give this guy a shot. - r/streetfighter",
+        "portrait": "https://i.imgur.com/I2e3gaV.png"
+    },
+    {
+        "name": "Karin",
+        "moniker": "Perfect Victor",
+        "description": "Widely considered one of the best characters in Street Fighter V, thanks to her first-rate normals and pressure game, Karin is a footsie powerhouse with some very potent mix-ups when V-Triggered, but requires some tricky just-frame execution to utilize her potential fully.",
+        "portrait": "https://i.imgur.com/SO90Gan.png"
+    },
+    {
+        "name": "Zangief",
+        "moniker": "Iron Cyclone",
+        "description": "Zangief is a grappler in its purest sense. His goal is simple: get in, command grab, and win. His sluggish mobility and lack of tools to get around fireballs do make this somewhat of a difficulty, but nevertheless, when he gets in, you better start praying.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/8wI0eml.png"
+    },
+    {
+        "name": "Laura",
+        "moniker": "Just Gotta Dance",
+        "description": "Laura is one of the scariest mix up characters in the game. Her Thunder Clap, a short ranged projectile that can be charged for extra hits and longer range, makes her unique among grapplers; the EX version even travels nearly full screen and causes a juggle on hit. Against slower characters this can let her control space and walk the opponent down, though it's too slow to be used like a Hadoken or similar moves. Once she is in close, she can create incredibly scary high/low/command grab left/right mixups with her V-Skill 1 or 2 and EX Thunder Clap.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/mEQneyP.png" 
+    },
+    {
+        "name": "Dhalsim",
+        "moniker": "Flame that Lights the Way",
+        "description": "One of the original world warriors, Dhalsim is back dispensing wisdom, yoga and fiery pain in Street Fighter V. Superficially, his normals and playstyle are pretty similar to his previous iteration, but it soon becomes apparent that he can do more than just zone - he can also put on considerable pressure, more so with his potent teleport mixups thrown into the fray.\n - r/streetfighter",
+        "portrait": "https://i.imgur.com/yGytZYW.png"
+    },
+    {
+        "name": "F.A.N.G.",
+        "moniker": "Cunning Trickster",
+        "description": "F.A.N.G is a charge character who utilizes poison (a new mechanic that is unique in the SF series), deception and far reaching, often double-hitting normals to defeat his opponents. But be warned: his damage output is lower than most. You could say that he needs to do two times the work that some other characters need to do to win.\n - r/streetfighter",
+        "portrait": "https://i.imgur.com/Gnq3joI.png"
+    },
+    {
+        "name": "Alex",
+        "moniker": "Awakened Talent",
+        "description": "Alex is a character of highs and lows. While he has a command grab and the slower walk speed that makes him seem like a grappler, he is more of a brawler type focusing on whittling away at the opponent with his longer ranged pokes until they get frustrated and make a mistake, at which point he must capitalize--as he often won't get another chance.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/ljX7bMT.png"
+    },
+    {
+        "name": "Ibuki",
+        "moniker": "Shinobi of the Summer Breeze",
+        "description": "The cheerful kunoichi returns! Although Street Fighter V aims to stay away from the Street Fighter 4 vortex play style, Ibuki still has tons of mix-ups and tricks that can keep her opponents guessing. With her V-Triggers, she can turn the tide of the battle with some ambiguous set ups. In the right players hands, Ibuki has some of the most dangerous okizeme setups in the game. Just be sure not to run out of them kunais~!\n - r/streetfighter",
+        "portrait": "https://i.imgur.com/agZtgHI.png"
+    },
+    {
+        "name": "Balrog",
+        "moniker": "Destroyer of Rules",
+        "description": "Balrog focuses on aggressive play and annoying his opponents. His trademark dash punches can quickly close the distance to punish any opponent attempting to walk forward or whiffing buttons, and once in he can force the opponent to play his game with his great plus on block buttons and crush counters. His V-Skill 1 and Critical Art also allows him to easily deal with projectiles, while his V-Skill 2 lets him make his dash punches multi-hitting and plus, making his approach even easier.\n - SUperCombo.gg",
+        "portrait": "https://i.imgur.com/mDTkapr.png"
+    },
+    {
+        "name": "Juri",
+        "moniker": "Purple Smoke of Deception",
+        "description": "Juri has excellent walkspeed and crazy combo routes available to her through her V-Trigger 1, offset by low health and stun bars. Of note: Juri's specials revolve around a unique \"storing\" mechanic. Before Juri can access her Fuharenkyaku Release (quarter-circler forward + kick) moves, she needs to use that version of the attack to gain a stock first. The next time she performs that move, she will instead use the Fuharenkyaku Release. The light kick version is a slow moving fireball, the medium kick version is a jumping attack that leads to longer combo opportunities, and the heavy kick version is a forward moving attack used mostly as a combo ender. The Fuharenkyakus she has stocked can be seen next to her V-Gauge; LK is the first icon, MK the second, and HK the third",
+        "portrait": "https://i.imgur.com/diY0Aoo.png"
+    },
+    {
+        "name": "Urien",
+        "moniker": "Dominating Light",
+        "description": "In Street Fighter V, Urien functions as a faithful re-interpretation of his highly popular and explosive Third Strike iteration. He has traded his signature unblockables for a playstyle oriented around high-damage and high-stun mixup sequences, as well as a suite of V-Skills that allow him to either accent his turtling ability (VS1) or his stun output (VS2).\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/Q2UHprp.png"
+    },
+    {
+        "name": "Akuma",
+        "moniker": "Master of the Fist",
+        "description": "Akuma is possibly the most versatile character in the game, a flexible shoto-style character with fast walkspeed and a variety of tools to effectively approach, keep opponents out, mix up opponents on offense, and make comebacks with powerful V-triggers. The price he pays for this versatility is frighteningly low health and stun, as well as somewhat short range on some of his normals.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/5AR0wUj.png"
+    },
+    {
+        "name": "Kolin",
+        "moniker": "Phantasm of Snow and Ice",
+        "description": "",
+        "portrait": "https://i.imgur.com/9N6cebi.png"
+    },
+    {
+        "name": "Ed",
+        "moniker": "Young Commander",
+        "description": "Ed stands apart in the Street Fighter series as one of only two characters to lack traditional motion inputs--outside of his super, all of his special moves can be input with combinations of normal attack buttons. While an all-rounder sort of character, Ed particularly shines once he gets his opponents into the corner.",
+        "portrait": "https://i.imgur.com/w2tkLPI.png"
+    },
+    {
+        "name": "Abigail",
+        "moniker": "Superhuman Hot-Rodder",
+        "description": "With some of the slowest walk speed, slowest dash, and slowest buttons in the game Abigail is not for players looking for an agile character. Because of this and his only armored move beginning on frame 3, being forced to play defensively as Abigail can be frustrating. To make up for this, however, Abigail also has one of the highest health pools, some of the largest ranged buttons, and some of the largest damage output in Street Fighter V. If you love to put fear into your opponent, are comfortable with slow and deliberate play, and giggle at the sight of an opponent's health bar melting away, Abigail is a great pick.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/r8vY7ru.png"
+    },
+    {
+        "name": "Menat",
+        "moniker": "Eyes of the Future",
+        "description": "This fortunate teller's apprentice has the unique ability to place her crystal ball on screen then call it back on command. She can also summon 6 orbs to extend combos and create mix up situations with her V-Trigger 1. If you are looking for a zoning character that can challenge your execution, look into Menat.\n - r//streetfighter",
+        "portrait": "https://i.imgur.com/Tto9k9P.png"
+    },
+    {
+        "name": "Zeku",
+        "moniker": "Ever-Changing Ninja",
+        "description": "Zeku is two characters in one, with an old form and a young form. The old form excels at long ranged spacing and poking, while the young form is better at pressure and combos. These give you a character who's good at pretty much everything but not all at once. Being strong with Zeku means you have to know when the right moment is to switch to the form best suited for whatever situation they're needed for.\n - SUperCombo.gg",
+        "portrait": "https://i.imgur.com/4mKJlmO.png"
+    },
+    {
+        "name": "Sakura",
+        "moniker": "The Exuberant Youth",
+        "description": "Sakura is a quick, aggressive rushdown character with a lot of safe attacks. With a quick walk-speed and dash, she can \"shimmy\" well and keep up the pressure and chase her fireballs. Many of her moves are safe on block, as well, allowing you to safely force your opponent to block. To add on, her light moves can easily convert into big damage, allowing her to punish mistakes very well. If you like to play quick, aggressive characters who can get a lot of opportunities on hit or on block, then Sakura is for you.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/Vcqh9mT.png"
+    },
+    {
+        "name": "Blanka",
+        "moniker": "Warrior of the Amazon",
+        "description": "Blanka has a wide range of normals which can frustrate his opponents, his slide and the hard-to-punish balls exist just to break his opponents mentally. To top that, he now has a command grab.... but wait, there is more! With his V-trigger 1, he can boost his specials even more, and V-Trigger 2 can create some ambiguous 50/50 mix ups at the corner. Is he King of the jungle or an online troll?\n - r/streetfighter",
+        "portrait": "https://i.imgur.com/IURWK3l.png"
+    },
+    {
+        "name": "Falke",
+        "moniker": "The Guardian Hawk",
+        "description": "Compared to most of the Street Fighter V cast, Falke is much slower paced and footsie oriented. With some of the longest ranged normals in the game, an amazing 1 button anti-air, and the only character with an air fireball she can use jumping in any direction, Falke is great at controlling space and wearing down her opponents. While spacing is her specialty, she can also go on the offensive and whittle down the opponents with some especially damaging combos and great corner carry.\n - r/streetfighter",
+        "portrait": "https://i.imgur.com/RxoxVNw.png"
+    },
+    {
+        "name": "Cody",
+        "moniker": "",
+        "description": "On surface level, Cody is a basic brawler with a decent projectile, anti air options, and setups. However, going beyond the surface reveals the dirty tricks behind this otherwise honest fighter. Utilizing moves like EX Tornado Sweep and Zonk Knuckle to get in, two versatile V-Skills to keep your opponent guessing, and huge robbery factor with one of the strongest V-Triggers in the game, Cody has little trouble closing the gap between him and his target, and once he does, he dishes out damage and stun with great meaties and VT2 setups to take the round in a moment's notice.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/T6KI0dd.png"
+    },
+    {
+        "name": "G",
+        "moniker": "Man of Mystery",
+        "description": "G is a momentum-based, rushdown fighter with an oppressive ground game and excels at opening up opponents with good frame traps and normals, while also always threatening with a command grab. Although he lacks in the defensive department, G makes it up as a solid character for those who want an aggressive playstyle with a simple game plan and versatile combos for micromanaging trading Presidentiality levels for Oki, or vice versa.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/LTYQnuD.png"
+    },
+    {
+        "name": "Sagat",
+        "moniker": "The King",
+        "description": "Sagat is still the relentless zoner he always has been. However, with fireballs being much weaker in SFV compared to past games, Sagat has to work a little harder to get his job done. Luckily, he still dominates in the aspect of zoning, despite it being somewhat weaker in this entry. His classic game of fireball/anti air is still very much prominent, and made even scarier with his Angry Scar VS1. Sagat is no slouch when it comes to going in, either. He has some exceptional buttons to use to stab at the opponent, and can unload lethal damage from some basic combos.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/eOWMmbf.png"
+    },
+    {
+        "name": "Kage",
+        "moniker": "Embodiment of Satsui",
+        "description": "Kage is a shoto-type character tailored towards offense. His gameplan revolves around getting up close and personal, applying pressure, and never letting up. However, while his corner pressure and damage are strong, his normals have short reach, which makes him struggle in neutral. If that's a tradeoff you're willing to make, Kage might be for you!",
+        "portrait": "https://i.imgur.com/FsdRIro.png"
+    },
+    {
+        "name": "E. Honda",
+        "moniker": "Supreme Sumo",
+        "description": "Honda is possibly the most volatile character in Street Fighter V. His tools, weirdly enough, give him a very skewed matchup chart compared to every other character in the game. He does better against a lot of top tiers than many other characters, but has more trouble with some mid and low tiers compared to everyone else as well.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/2QltcPh.png"
+    },
+    {
+        "name": "Lucia",
+        "moniker": "Metro City Cop",
+        "description": "An all-around character with a variety of tools, and flashy combos using her V-triggers. Her Firecracker projectile can be used to fight back in fireball wars, and her Gun Smoke command run can be used for positioning, combos, and to sneak in cheeky throws. When she scores a solid hit, her corner carry is very respectable, and both of her triggers enhance it further; VT2 is essentially capable of meterless corner-to-corner carry on a crush counter activation combo, which is very strong for a 2-bar trigger.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/cnhkUyl.png"
+    },
+    {
+        "name": "Poison",
+        "moniker": "This Rose Has Thorns",
+        "description": "",
+        "portrait": "https://i.imgur.com/vCtfyPn.png"
+    },
+    {
+        "name": "Gill",
+        "moniker": "Emperor",
+        "description": "Being the emperor of the Illuminati, Gill doesn't mess around. Like Urien, he's got a bit of everything. His moveset is littered with tools that give him plenty of good pokes, basic combos, and generally good spacing at midrange thanks to his long limbs and fireballs. Now, being a master of his technique and the emperor of the secret society, Gill hits HARD. Gill has a unique mechanic in the form of Retribution at the cost of have absolutely no crush counters. By setting an opponent on fire or freezing them, and then hitting them with an attack of the opposite element, Gill is able to greatly extend his combos, dealing big damage, stun, and corner carry.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/lR5aU2C.png"
+    },
+    {
+        "name": "Seth",
+        "moniker": "King of Chaos",
+        "description": "Seth is more of less a jack of all trades. He's obviously been toned down greatly, but still retains some great aspects about him. His mobility is great, frame data and pokes are somewhat standard but not bad, and his damage output is some of the best in the game. Being a glass cannon, Seth is incredibly volatile, but if you think you have the patience to get in and overwhelm the opponent with a vast array of tools, Seth might be just for you.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/TgFhf2U.png"
+    },
+    {
+        "name": "Dan",
+        "moniker": "Saikyo Style",
+        "description": "Dan is quite the exotic shoto. Despite not being intentionally lacking anymore, he still maintains the facade of a joke character. This is most notable with his great V-Skills. They allow him to expand his combo and pressure possibilities in different ways, including his damage potential, while also allowing him to build his v-meter securely. There is one unique downside to them - they also build the opponent's V-Meter.\n - SuperCombo.gg",
+        "portrait": "https://i.imgur.com/DBEL1c4.png"
+    },
+    {
+        "name": "Rose",
+        "moniker": "Soul Power Savant",
+        "description": "Rose is a mixture of a zoner and a setplay character. Her heavy normals have long range, she has a decent projectile, her anti-air game is strong, and she can absolutely fill the screen with hitboxes. However, her medium and light normals are stubby or unsafe, she struggles on defense, and her damage outside of her V-Triggers is low. If that's a trade-off you can accept, Rose might be for you!",
+        "portrait": "https://i.imgur.com/eB0ptmS.png"
+    },
+    {
+        "name": "Oro",
+        "moniker": "Sleepy Hermit",
+        "description": "Oro is a character of extremes. His normals are generally stubby and his cancel options are limited, making neutral difficult for him in many match-ups. However, his V-Trigger 1 is potentially the most powerful comeback tool in the game, allowing for ridiculously long and damaging combos off of stray hits. If you play to find footage for your highlight reel, Oro might be for you.",
+        "portrait": "https://i.imgur.com/mgUJ6f2.png"
+    },
+    {
+        "name": "Akira",
+        "moniker": "Kung Fu Rider",
+        "description": "Akira Kazama is a character from Rival Schools, another Capcom fighting game centered around a cast of martial artist high school students. In Street Fighter V she brings a unique \"air burst\" mechanic as an homage to the mechanics of her original series and can even call on her older brother Daigo as a \"striker\" style add-on to her kit.",
+        "portrait": "https://i.imgur.com/QGMYepY.png"
+    },
+    {
+        "name": "Luke",
+        "moniker": "Shining Star",
+        "description": "Luke is Street Fighter V's final newcomer, and a hint at the future of the series. An aggressive character with many normals and specials that move him forward, target combos that make capitalizing on opponent's whiffs a breeze, and two powerful V-Trigger options, Luke is a force to be reckoned with.",
+        "portrait": "https://i.imgur.com/pqlCK3E.png"
+    }
+]
