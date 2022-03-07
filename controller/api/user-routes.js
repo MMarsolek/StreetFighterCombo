@@ -3,18 +3,18 @@ const User = require('../../model/Users');
 const oAuth = require('../../utils/token');
 const auth = require('../../utils/auth');
 
-router.get('/', async (req, res) =>{
-    try{
-        const newUser = await new User.create({
-            username: req.body.username,
-            email: req.body.email,
-            password: req.body.password,
-        });
-        res.json(newUser); 
-    } catch(err) {
-        res.status(500).send(err);
-    }
-});
+// router.get('/', async (req, res) =>{
+//     try{
+//         const newUser = await new User.create({
+//             username: req.body.username,
+//             email: req.body.email,
+//             password: req.body.password,
+//         });
+//         res.json(newUser); 
+//     } catch(err) {
+//         res.status(500).send(err);
+//     }
+// });
 
 
 //Create new user
@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
         name:newUser.name,
         token: token
       }
-      res.json(newUser);
+      res.json({token: token});
     } catch (err) {
       console.log(err0)
       res.status(500).send(err);
@@ -69,7 +69,7 @@ router.post('/login', async (req, res) => {
       name:user.name,
       token:token
     }
-    res.json({ user, message: 'You are now logged in!' });
+    res.json({token: token, user, message: 'You are now logged in!' });
   } catch (err) {
     res.status(400).json({ message: 'Incorrect username or password' });
   }
