@@ -5,10 +5,11 @@ const {Character, Combo, Move} = require('../../model');
 router.get('/', async (req,res) => {
     try {
         const charData = await Character.findAll();
-        const rawCharData = charData.get({ plain:true });
+        const rawCharData = charData.map(character => character.get({ plain:true }));
 
         res.status(200).json(rawCharData);
     } catch(err) {
+        console.log(`=====\n${err}\n=====`);
         res.status(500).send(err);
     }
 });
@@ -29,6 +30,7 @@ router.get('/:charName', async (req,res) => {
 
         res.status(200).json(rawCharData);
     } catch(err) {
+        console.log(`=====\n${err}\n=====`);
         res.status(500).send(err);
     }
 })
