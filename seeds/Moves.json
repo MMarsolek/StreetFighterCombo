@@ -1,0 +1,289 @@
+[
+    {
+        "CharacterId": 1,
+        "name": "Light punch",
+        "sfNotation": "LP",
+        "numPadNotation": "LP",
+        "image": "https://i.imgur.com/J7NsCnC.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Medium punch",
+        "sfNotation": "MP",
+        "numPadNotation": "MP",
+        "image": "https://i.imgur.com/PIaWkEY.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Heavy punch",
+        "sfNotation": "HP",
+        "numPadNotation": "HP",
+        "image": "https://i.imgur.com/ukqLqEi.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Light kick",
+        "sfNotation": "LK",
+        "numPadNotation": "LK",
+        "image": "https://i.imgur.com/fDmIylk.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Medium kick",
+        "sfNotation": "MK",
+        "numPadNotation": "MK",
+        "image": "https://i.imgur.com/huAUKfT.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Heavy kick",
+        "sfNotation": "HK",
+        "numPadNotation": "HK",
+        "image": "https://i.imgur.com/DN0j2PK.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Crouching light punch",
+        "sfNotation": "crLP",
+        "numPadNotation": "2LP",
+        "image": "https://i.imgur.com/nJtpNbC.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Crouching medium punch",
+        "sfNotation": "crMP",
+        "numPadNotation": "2MP",
+        "image": "https://i.imgur.com/f0EhyMs.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Crouching heavy punch",
+        "sfNotation": "crHP",
+        "numPadNotation": "2HP",
+        "image": "https://i.imgur.com/2HvXzQu.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Crouching light kick",
+        "sfNotation": "crLK",
+        "numPadNotation": "2LK",
+        "image": "https://i.imgur.com/5aPWw1o.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Crouching medium kick",
+        "sfNotation": "crMK",
+        "numPadNotation": "2MK",
+        "image": "https://i.imgur.com/XR3u2D0.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Crouching heavy kick",
+        "sfNotation": "crHK",
+        "numPadNotation": "2HK",
+        "image": "https://i.imgur.com/zbV2u0S.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Jumping light punch",
+        "sfNotation": "jLP",
+        "numPadNotation": "jLP",
+        "image": "https://i.imgur.com/IXiPgH4.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Jumping medium punch",
+        "sfNotation": "jMP",
+        "numPadNotation": "jMP",
+        "image": "https://i.imgur.com/CB5l8Mu.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Jumping heavy punch",
+        "sfNotation": "jHP",
+        "numPadNotation": "jHP",
+        "image": "https://i.imgur.com/LWqaJS9.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Jumping light kick",
+        "sfNotation": "jLK",
+        "numPadNotation": "jLK",
+        "image": "https://i.imgur.com/V0w17Kp.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Jumping medium kick",
+        "sfNotation": "jMK",
+        "numPadNotation": "jMK",
+        "image": "https://i.imgur.com/cBOHxKK.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Jumping heavy kick",
+        "sfNotation": "jHK",
+        "numPadNotation": "jHK",
+        "image": "https://i.imgur.com/jZMenj0.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Collarbone Breaker",
+        "sfNotation": "fMP",
+        "numPadNotation": "6MP",
+        "input": "🡺 + Medium punch",
+        "image": "https://i.imgur.com/NlhRjpB.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Solar Plexus Strike",
+        "sfNotation": "fHP",
+        "numPadNotation": "6HP",
+        "input": "🡺 + Heavy punch",
+        "image": "https://i.imgur.com/dGSOHeX.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Axe Kick",
+        "sfNotation": "bHK",
+        "numPadNotation": "4HK",
+        "input": "🡸 + Heavy kick",
+        "image": "https://i.imgur.com/7nPCg9P.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Light hadoken",
+        "sfNotation": "qcfLP",
+        "numPadNotation": "236LP",
+        "input": "🡻🡾🡺 + Light punch",
+        "image": "https://i.imgur.com/ao58fzp.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Medium hadoken",
+        "sfNotation": "qcfMP",
+        "numPadNotation": "236MP",
+        "input": "🡻🡾🡺 + Medium punch",
+        "image": "https://i.imgur.com/ao58fzp.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Heavy hadoken",
+        "sfNotation": "qcfHP",
+        "numPadNotation": "236HP",
+        "input": "🡻🡾🡺 + Heavy punch",
+        "image": "https://i.imgur.com/ao58fzp.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "EX hadoken",
+        "sfNotation": "qcfPP",
+        "numPadNotation": "236PP",
+        "input": "🡻🡾🡺 + two punch buttons",
+        "image": "https://i.imgur.com/BGDXxaF.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Light shoryuken",
+        "sfNotation": "dpLP",
+        "numPadNotation": "623LP",
+        "input": "🡺🡻🡾 + Light punch",
+        "image": "https://i.imgur.com/eGNj0we.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Medium shoryuken",
+        "sfNotation": "dpMP",
+        "numPadNotation": "623MP",
+        "input": "🡺🡻🡾 + Medium punch",
+        "image": "https://i.imgur.com/eGNj0we.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Heavy shoryuken",
+        "sfNotation": "dpHP",
+        "numPadNotation": "623HP",
+        "input": "🡺🡻🡾 + Heavy punch",
+        "image": "https://i.imgur.com/JLm5zSC.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "EX shoryuken",
+        "sfNotation": "dpLP",
+        "numPadNotation": "623LP",
+        "input": "🡺🡻🡾 + two punch buttons",
+        "image": "https://i.imgur.com/cboXdH1.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Light Tatsumaki Senpukyaku",
+        "sfNotation": "qcbLK",
+        "numPadNotation": "214LK",
+        "input": "🡻🡿🡸 + Light kick",
+        "image": "https://i.imgur.com/5t6ikPF.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Medium Tatsumaki Senpukyaku",
+        "sfNotation": "qcbMK",
+        "numPadNotation": "214MK",
+        "input": "🡻🡿🡸 + Medium kick",
+        "image": "https://i.imgur.com/5t6ikPF.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Heavy Tatsumaki Senpukyaku",
+        "sfNotation": "qcbHK",
+        "numPadNotation": "214HK",
+        "input": "🡻🡿🡸 + Heavy kick",
+        "image": "https://i.imgur.com/5t6ikPF.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "EX Tatsumaki Senpukyaku",
+        "sfNotation": "qcbKK",
+        "numPadNotation": "214KK",
+        "input": "🡻🡿🡸 + two kick buttons",
+        "image": "https://i.imgur.com/kZv9vg0.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Light Jodan Sokutou Geri",
+        "sfNotation": "hcfLK",
+        "numPadNotation": "41236LK",
+        "input": "🡸🡿🡻🡾🡺 + Light kick",
+        "image": "https://i.imgur.com/419FQpq.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Medium Jodan Sokutou Geri",
+        "sfNotation": "hcfMK",
+        "numPadNotation": "41236MK",
+        "input": "🡸🡿🡻🡾🡺 + Medium kick",
+        "image": "https://i.imgur.com/419FQpq.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Heavy Jodan Sokutou Geri",
+        "sfNotation": "hcfHK",
+        "numPadNotation": "41236HK",
+        "input": "🡸🡿🡻🡾🡺 + Heavy kick",
+        "image": "https://i.imgur.com/419FQpq.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "EX Jodan Sokutou Geri",
+        "sfNotation": "hcfKK",
+        "numPadNotation": "41236KK",
+        "input": "🡸🡿🡻🡾🡺 + two kick buttons",
+        "image": "https://i.imgur.com/7shp2Gt.png"
+    },
+    {
+        "CharacterId": 1,
+        "name": "Shinku Hadoken",
+        "sfNotation": "qcfx2P",
+        "numPadNotation": "236236P",
+        "input": "🡻🡾🡺🡻🡾🡺 + any punch button ",
+        "image": "https://i.imgur.com/lygRbGJ.png"
+    }
+
+]
