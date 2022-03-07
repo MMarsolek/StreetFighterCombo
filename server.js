@@ -1,37 +1,23 @@
 const path = require('path');
 const oAuth = require('./utils/token')
 const express = require('express');
-const session = require('express-session');
+// This is a necessary bit of middleware to allow our front end to access this api
+const cors = require('cors');
 
 const routes = require('./controller');
 const sequelize = require('./config/connection');
-
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Sets up the Express app
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const sess = {
-    secret: 'ThisIsOutSecret',
-    cookie: {maxAge: 1000*60*10},
-    resave : false,
-    saveUnitialized: true,
-    store: new SequelizeStore({
-        db: sequelize
-    })
-};
+app.use(cors());
 
 oAuth.setKeys();
 
-app.use(session(sess)); 
-
 // Express middleware for processing post and put requests
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
-
-// Setting up the public directory to handle static requests (TODO: will we actually need this?)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended:true }));
 
 app.use(routes);
 
