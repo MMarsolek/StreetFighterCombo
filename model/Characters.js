@@ -15,9 +15,14 @@ Character.init(
         len: [1, 10]
       }
     },
+    // The character's nickname
+    moniker: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     // A brief bio and description of the character's gameplay style
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(1000),
       allowNull: false
     },
     // A string containing the file path to the portrait image for this character
