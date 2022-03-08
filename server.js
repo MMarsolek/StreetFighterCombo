@@ -1,30 +1,27 @@
 const path = require('path');
+const oAuth = require('./utils/token')
 const express = require('express');
-const session = require('express-session');
+// This is a necessary bit of middleware to allow our front end to access this api
+const cors = require('cors');
+
 const routes = require('./controller');
 const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+// Sets up the Express app
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const sess = {
-    secret: 'Our Super Secret Password',
-    cookie: {maxAge: 1000*60*10},
-    resave : false,
-    saveUnitialized: true,
-    store: new SequelizeStore({
-        db: sequelize
-    })
-};
+app.use(cors());
 
-app.use(session(sess)); 
+oAuth.setKeys();
 
+// Express middleware for processing post and put requests
 app.use(express.json());
-app.use(express.urlencoded({extended:true})),
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended:true }));
 
 app.use(routes);
 
+// Syncs sequelize before setting the server to listen
 sequelize.sync({force: false}).then(()=>{
     app.listen(PORT, ()=> console.log(`Currently listening on ${PORT}`));
 });
