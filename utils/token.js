@@ -28,7 +28,7 @@ async function getToken(data){
         //Who the token is for
         .setAudience(audience)
         //When it expires
-        .setExpirationTime('48h')
+        .setExpirationTime('2h')
         .sign(privateKey)
 
     return jwt;

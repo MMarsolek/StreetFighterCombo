@@ -3,20 +3,6 @@ const User = require('../../model/Users');
 const oAuth = require('../../utils/token');
 const auth = require('../../utils/auth');
 
-router.get('/', async (req, res) =>{
-    try{
-        const newUser = await new User.create({
-            username: req.body.username,
-            email: req.body.email,
-            password: req.body.password,
-        });
-        res.json(newUser); 
-    } catch(err) {
-        res.status(500).send(err);
-    }
-});
-
-
 //Create new user
 router.post('/', async (req, res) => {
     console.log("signup attempt")
