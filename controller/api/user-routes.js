@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
       const userObj = {user: newUser, auth: token};
       res.json(userObj);
     } catch (err) {
-      console.log(err0)
+      console.log(err)
       res.status(500).send(err);
     }
   });
@@ -33,12 +33,12 @@ router.post('/login', async (req, res) => {
     });
 
     if (!user) {
-      res.status(400).json({ message: 'Incorrect username or password' });
+      res.status(400).send({ message: 'Incorrect username or password' });
       return;
     }
     const validPassword = user.checkPassword(req.body.password);
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect username or password' });
+      res.status(400).send({ message: 'Incorrect username or password' });
       return;
     }
 
@@ -47,7 +47,7 @@ router.post('/login', async (req, res) => {
 
     res.json({ user, message: 'You are now logged in!', auth:token });
   } catch (err) {
-    res.status(400).json({ message: 'Incorrect username or password' });
+    res.status(400).send(err);
   }
 });
 
