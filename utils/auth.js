@@ -5,14 +5,10 @@ const token = require('./token')
 
 const withAuth = (req, res, next) => {
   try {
-    token.decryptToken(req.session.user.token)
+    token.decryptToken(req.body.token);
+    next();
   } catch (error) {
     res.redirect("/login");    
-  }
-  if (!req.session.user) {
-    res.redirect("/login");
-  } else {
-    next();
   }
 };
   

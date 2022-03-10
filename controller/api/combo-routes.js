@@ -11,8 +11,6 @@ router.get('/', async (req, res) => {
         const combosData = await Combos.findAll();
         // TODO: ask what the deal with .get({plain: true}) not working is get({ plain: true });
         const rawCombosData = combosData.map(combo => combo.get({plain: true}));
-        
-
         res.status(200).json(rawCombosData);
     }catch(err) {
         console.log(`=====\n${err}\n=====`);
@@ -24,13 +22,10 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const comboData = await Combos.findByPk(req.params.id);
-
         if (!comboData) {
             return res.status(404).json({ message: 'No combo found with that id!'});
         }
-
         const rawCombosData = comboData.get({ plain:true });
-
         res.status(200).json(rawCombosData);
     } catch(err) {
         console.log(`=====\n${err}\n=====`);
