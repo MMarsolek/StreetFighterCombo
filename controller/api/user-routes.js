@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
       res.json(userObj);
     } catch (err) {
       console.log(err)
-      res.status(500).send(err);
+      res.status(500).send({ message: 'Unable to create account' });
     }
   });
 
@@ -28,7 +28,7 @@ router.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({
       where: {
-        email: req.body.email,
+        username: req.body.username,
       },
     });
 
@@ -62,7 +62,7 @@ try {
     res.status(200).json();
 } catch(err){
     console.log(err);
-    res.status.json(500).json(err)
+    res.status.json(500).send({ message: 'Unable to delete account' })
 }
 });
 
