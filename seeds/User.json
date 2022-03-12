@@ -1,0 +1,52 @@
+[
+    {
+        "username": "userOne",
+        "email": "userOne@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userTwo",
+        "email": "userTwo@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userThree",
+        "email": "userThree@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userFour",
+        "email": "userFour@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userFive",
+        "email": "userFive@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userSix",
+        "email": "userSix@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userSeven",
+        "email": "userSeven@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userEight",
+        "email": "userEight@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userNine",
+        "email": "userNine@test.com",
+        "password": "password"
+    },
+    {
+        "username": "userTen",
+        "email": "userTen@test.com",
+        "password": "password"
+    }
+]
