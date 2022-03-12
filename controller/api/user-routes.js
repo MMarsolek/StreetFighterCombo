@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
         email: req.body.email, 
         password: req.body.password,
       });
-      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email})
+      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email, id: newUser.id})
       const userObj = {user: newUser, token};
       res.json(userObj);
     } catch (err) {
@@ -41,7 +41,7 @@ router.post('/login', async (req, res) => {
       res.status(416).send({ message: 'Incorrect password' });
       return;
     }
-    const token = await oAuth.getToken({userName: user.username, email: user.email})
+    const token = await oAuth.getToken({userName: user.username, email: user.email, id: user.id})
       res.json({ user, token });
     } catch (err) {
     res.status(425).send({message: 'Cannot login. Please try creating a new account'});
