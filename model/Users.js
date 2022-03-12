@@ -46,6 +46,12 @@ User.init(
       beforeUpdate: updatedUserData => {
         updatedUserData.password = bcrypt.hashSync(updatedUserData.password, 8);
         return updatedUserData;
+      },
+      beforeBulkCreate: updatedUserData => {
+        updatedUserData.forEach(user => {
+          user.password = bcrypt.hashSync(user.password, 8);
+        });
+        return updatedUserData;
       }
     },
     sequelize,

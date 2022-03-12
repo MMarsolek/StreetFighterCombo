@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Combos = require('../../model/Combos');
+const { Combo, ComboMove, Move }  = require('../../model');
 const Translator = require('../../utils/comboTranslator')
 const oAuth = require('../../utils/token');
 const auth = require('../../utils/auth');
@@ -8,8 +8,7 @@ const filter =require('../../utils/filter')
 //Get all combo from database
 router.get('/', async (req, res) => {
     try{
-        const combosData = await Combos.findAll();
-        // TODO: ask what the deal with .get({plain: true}) not working is get({ plain: true });
+        const combosData = await Combo.findAll();
         const rawCombosData = combosData.map(combo => combo.get({plain: true}));
         res.status(200).json(rawCombosData);
     }catch(err) {
@@ -21,26 +20,52 @@ router.get('/', async (req, res) => {
 //Get one combo from database
 router.get('/:id', async (req, res) => {
     try {
-        const comboData = await Combos.findByPk(req.params.id);
+        const comboData = await Combo.findByPk(req.params.id, {
+            // TODO: how to sort the ComboMoves by stepNumber?
+            include: {model: ComboMove, include: Move}
+        });
         if (!comboData) {
             return res.status(404).json({ message: 'No combo found with that id!'});
         }
-        const rawCombosData = comboData.get({ plain:true });
-        res.status(200).json(rawCombosData);
+        const rawComboData = comboData.get({ plain:true });
+        res.status(200).json(rawComboData);
     } catch(err) {
         console.log(`=====\n${err}\n=====`);
         res.status(500).send(err);
     }
 });
 
+// TODO: add authentication to this route
 router.post('/', auth, async (req, res) => {
+    // We should find the following in req.body: 
+    // title (mandatory) - the title of the combo
+    // notation (mandatory) - the transcription of the combo's steps. We'll use the state variable "comboSubmission" on the front end for this
+    // notes (optional) - any notes about what is necessary to execute this combo
+    // comboMoves: an array of objects containing the information we need to generate the combomoves that will be associated with this combo. We'll use the state variable "renderedCombo" on the front end for this
+    // //  ComboId: the id of the combo this combomove is associated with
+    // //  MoveId: the id of the move this combomove is associated with
+    // //  stepNumber: this combo's step in the combo
+console.log(req.body.token);
     try {
-        const token = req.session.user.token;
-        if (!oAuth.decryptToken(token)){
-            res.redirect("/login");
+        const tokenData = JSON.parse(atob(token.split('.')[1]));
+        
+        const newCombo = await Combo.create({
+            title: req.body.title,
+            notation: req.body.notation,
+            notes: req.body.notes,
+            UserId: tokenData.metadata.id
+        });
+
+        for (const comboMove of req.body.comboMoves) {
+            await ComboMove.create(
+                {
+                    ComboId: newCombo.id,
+                    MoveId: comboMove.moveId,
+                    stepNumber: comboMove.stepNumber
+                }
+            );
         }
-        req.body.notes = filter(req.body.notes);
-        const newCombo = await Combos.create(req.body);
+
         res.status(200).json(newCombo);
     } catch (err) {
         console.log(`=====\n${err}\n=====`);
@@ -50,7 +75,7 @@ router.post('/', auth, async (req, res) => {
 
 router.delete('/:id', auth, async (req, res) => {
     try {
-        await Combos.destroy({
+        await Combo.destroy({
             where: {
                 id: req.params.id
             },

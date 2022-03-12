@@ -5,20 +5,19 @@ const auth = require('../../utils/auth');
 
 //Create new user
 router.post('/', async (req, res) => {
-    console.log("signup attempt")
-    console.log(req.body)
-    try {
+  console.log(req.body)
+  try {
+      console.log("signup attempt")
       const newUser = await User.create({
-        username: req.body.name,
+        username: req.body.username,
         email: req.body.email, 
         password: req.body.password,
       });
-      const token = oAuth.getToken({userName: newUser.username, email: newUser.email});
-      const userObj = {user: newUser, auth: token};
+      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email, id: newUser.id})
+      const userObj = {user: newUser, token};
       res.json(userObj);
     } catch (err) {
-      console.log(err)
-      res.status(500).send({ message: 'Unable to create account' });
+      res.status(500).json({message: 'Unable to create account'});
     }
   });
 
@@ -33,21 +32,19 @@ router.post('/login', async (req, res) => {
     });
 
     if (!user) {
-      res.status(400).send({ message: 'Incorrect username or password' });
+      res.status(415).send({ message: 'Incorrect username' });
       return;
     }
     const validPassword = user.checkPassword(req.body.password);
+    console.log(user.password)
     if (!validPassword) {
-      res.status(400).send({ message: 'Incorrect username or password' });
+      res.status(416).send({ message: 'Incorrect password' });
       return;
     }
-
-    console.log("logged in!")
-    const token = oAuth.getToken({userName: user.username, email: user.email});
-
-    res.json({ user, message: 'You are now logged in!', auth:token });
-  } catch (err) {
-    res.status(400).send(err);
+    const token = await oAuth.getToken({userName: user.username, email: user.email, id: user.id})
+      res.json({ user, token });
+    } catch (err) {
+    res.status(425).send({message: 'Cannot login. Please try creating a new account'});
   }
 });
 
