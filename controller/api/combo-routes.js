@@ -36,7 +36,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // TODO: add authentication to this route
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     // We should find the following in req.body: 
     // title (mandatory) - the title of the combo
     // notation (mandatory) - the transcription of the combo's steps. We'll use the state variable "comboSubmission" on the front end for this
@@ -45,9 +45,16 @@ router.post('/', async (req, res) => {
     // //  ComboId: the id of the combo this combomove is associated with
     // //  MoveId: the id of the move this combomove is associated with
     // //  stepNumber: this combo's step in the combo
-
+console.log(req.body.token);
     try {
-        const newCombo = await Combo.create(req.body);
+        const tokenData = JSON.parse(atob(token.split('.')[1]));
+        
+        const newCombo = await Combo.create({
+            title: req.body.title,
+            notation: req.body.notation,
+            notes: req.body.notes,
+            UserId: tokenData.metadata.id
+        });
 
         for (const comboMove of req.body.comboMoves) {
             await ComboMove.create(
