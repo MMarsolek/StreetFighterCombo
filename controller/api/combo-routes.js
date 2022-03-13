@@ -45,7 +45,6 @@ router.post('/', auth, async (req, res) => {
     // //  ComboId: the id of the combo this combomove is associated with
     // //  MoveId: the id of the move this combomove is associated with
     // //  stepNumber: this combo's step in the combo
-console.log(req.body.token);
     try {
         const tokenData = JSON.parse(atob(req.body.token.split('.')[1]));
         

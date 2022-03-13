@@ -5,6 +5,7 @@ const token = require('./token')
 
 const withAuth = (req, res, next) => {
   try {
+    console.log(req.body.token)
     token.decryptToken(req.body.token);
     next();
   } catch (error) {
