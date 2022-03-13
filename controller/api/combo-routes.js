@@ -41,6 +41,7 @@ router.post('/', auth, async (req, res) => {
     // title (mandatory) - the title of the combo
     // notation (mandatory) - the transcription of the combo's steps. We'll use the state variable "comboSubmission" on the front end for this
     // notes (optional) - any notes about what is necessary to execute this combo
+    // CharacterId (mandatory) - the id of the character this post is associated with
     // comboMoves: an array of objects containing the information we need to generate the combomoves that will be associated with this combo. We'll use the state variable "renderedCombo" on the front end for this
     // //  ComboId: the id of the combo this combomove is associated with
     // //  MoveId: the id of the move this combomove is associated with
@@ -52,7 +53,9 @@ router.post('/', auth, async (req, res) => {
             title: req.body.title,
             notation: req.body.notation,
             notes: req.body.notes,
+            CharacterId: req.body.characterId,
             UserId: tokenData.metadata.id
+
         });
 
         for (const comboMove of req.body.comboMoves) {
