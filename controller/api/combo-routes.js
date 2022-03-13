@@ -54,7 +54,8 @@ router.post('/', auth, async (req, res) => {
             notation: req.body.notation,
             notes: req.body.notes,
             CharacterId: req.body.characterId,
-            UserId: req.body.userId
+            UserId: tokenData.metadata.id
+
         });
 
         for (const comboMove of req.body.comboMoves) {
