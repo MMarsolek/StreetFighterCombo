@@ -13,8 +13,8 @@ router.post('/', async (req, res) => {
         email: req.body.email, 
         password: req.body.password,
       });
-      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email, id: newUser.id})
-      const userObj = {user: newUser, token};
+      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email})
+      const userObj = {user:{userName: newUser.username, email: newUser.email}, token};
       res.json(userObj);
     } catch (err) {
       res.status(500).json({message: 'Unable to create account'});
@@ -32,19 +32,21 @@ router.post('/login', async (req, res) => {
     });
 
     if (!user) {
-      res.status(415).send({ message: 'Incorrect username' });
+      res.status(400).send({ message: 'Incorrect username' });
       return;
     }
     const validPassword = user.checkPassword(req.body.password);
     console.log(user.password)
     if (!validPassword) {
-      res.status(416).send({ message: 'Incorrect password' });
+      res.status(400).send({ message: 'Incorrect password' });
       return;
     }
-    const token = await oAuth.getToken({userName: user.username, email: user.email, id: user.id})
-      res.json({ user, token });
+    const token = await oAuth.getToken({userName: user.username, email: user.email})
+    const userObj = {user:{userName: newUser.username, email: newUser.email}, token};
+
+      res.json({ userObj, token });
     } catch (err) {
-    res.status(425).send({message: 'Cannot login. Please try creating a new account'});
+    res.status(500).send({message: 'Cannot login. Please try creating a new account'});
   }
 });
 

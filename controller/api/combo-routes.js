@@ -47,7 +47,7 @@ router.post('/', auth, async (req, res) => {
     // //  stepNumber: this combo's step in the combo
 console.log(req.body.token);
     try {
-        const tokenData = JSON.parse(atob(token.split('.')[1]));
+        const tokenData = JSON.parse(atob(req.body.token.split('.')[1]));
         
         const newCombo = await Combo.create({
             title: req.body.title,
