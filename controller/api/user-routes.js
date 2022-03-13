@@ -7,7 +7,6 @@ const auth = require('../../utils/auth');
 router.post('/', async (req, res) => {
   console.log(req.body)
   try {
-      console.log("signup attempt")
       const newUser = await User.create({
         username: req.body.username,
         email: req.body.email, 
@@ -23,7 +22,8 @@ router.post('/', async (req, res) => {
 
 // User Login
 router.post('/login', async (req, res) => {
-  console.log("login attempt")
+  console.log("=============login attempt==========")
+  console.log(req.body.username)
   try {
     const user = await User.findOne({
       where: {
@@ -42,10 +42,12 @@ router.post('/login', async (req, res) => {
       return;
     }
     const token = await oAuth.getToken({userName: user.username, email: user.email})
-    const userObj = {user:{userName: newUser.username, email: newUser.email}, token};
+    const userObj = {user:{userName: user.username, email: user.email}, token};
 
       res.json({ userObj, token });
     } catch (err) {
+      console.log(req.body)
+      console.log(err)
     res.status(500).send({message: 'Cannot login. Please try creating a new account'});
   }
 });
