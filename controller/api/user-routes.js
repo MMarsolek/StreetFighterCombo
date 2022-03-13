@@ -12,8 +12,8 @@ router.post('/', async (req, res) => {
         email: req.body.email, 
         password: req.body.password,
       });
-      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email})
-      const userObj = {user:{userName: newUser.username, email: newUser.email}, token};
+      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email, id : user.id})
+      const userObj = {user:{userName: newUser.username, email: newUser.email, id : user.id}, token};
       res.json(userObj);
     } catch (err) {
       res.status(500).json({message: 'Unable to create account'});
@@ -41,8 +41,8 @@ router.post('/login', async (req, res) => {
       res.status(400).send({ message: 'Incorrect password' });
       return;
     }
-    const token = await oAuth.getToken({userName: user.username, email: user.email})
-    const userObj = {user:{userName: user.username, email: user.email}, token};
+    const token = await oAuth.getToken({userName: user.username, email: user.email, id : user.id})
+    const userObj = {user:{userName: user.username, email: user.email, id : user.id}, token};
 
       res.json({ userObj, token });
     } catch (err) {
