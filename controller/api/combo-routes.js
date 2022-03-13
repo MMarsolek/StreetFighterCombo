@@ -52,6 +52,7 @@ router.post('/', auth, async (req, res) => {
             title: req.body.title,
             notation: req.body.notation,
             notes: req.body.notes,
+            CharacterId: req.body.characterId,
             UserId: tokenData.metadata.id
         });
 
