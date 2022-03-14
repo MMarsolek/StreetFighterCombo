@@ -21,8 +21,8 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const comboData = await Combo.findByPk(req.params.id, {
-            // TODO: how to sort the ComboMoves by stepNumber?
-            include: {model: ComboMove, include: Move}
+            // sorting by stepNumber to ensure that front end stuff that uses combos is organized properly
+            include: {model: ComboMove, order: [['stepNumber', 'ASC']],  include: Move}
         });
         if (!comboData) {
             return res.status(404).json({ message: 'No combo found with that id!'});
