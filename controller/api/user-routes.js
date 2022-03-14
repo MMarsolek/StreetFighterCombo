@@ -5,25 +5,27 @@ const auth = require('../../utils/auth');
 
 //Create new user
 router.post('/', async (req, res) => {
-  console.log(req.body)
   try {
       const newUser = await User.create({
         username: req.body.username,
         email: req.body.email, 
         password: req.body.password,
       });
-      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email, id : user.id})
-      const userObj = {user:{userName: newUser.username, email: newUser.email, id : user.id}, token};
-      res.json(userObj);
+      console.log('newUser')
+      console.log(newUser)
+      const token = await oAuth.getToken({userName: newUser.username, email: newUser.email, id : newUser.id})
+      const userObj = {user:{userName: newUser.username, email: newUser.email, id : newUser.id}, token};
+      res.status(200).json({ userObj, token });
     } catch (err) {
+      console.log(err)
       res.status(500).json({message: 'Unable to create account'});
+      return err
     }
   });
 
 // User Login
 router.post('/login', async (req, res) => {
-  console.log("=============login attempt==========")
-  console.log(req.body.username)
+
   try {
     const user = await User.findOne({
       where: {
@@ -36,7 +38,6 @@ router.post('/login', async (req, res) => {
       return;
     }
     const validPassword = user.checkPassword(req.body.password);
-    console.log(user.password)
     if (!validPassword) {
       res.status(400).send({ message: 'Incorrect password' });
       return;
@@ -46,8 +47,6 @@ router.post('/login', async (req, res) => {
 
       res.json({ userObj, token });
     } catch (err) {
-      console.log(req.body)
-      console.log(err)
     res.status(500).send({message: 'Cannot login. Please try creating a new account'});
   }
 });
