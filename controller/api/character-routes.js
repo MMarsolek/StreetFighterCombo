@@ -23,7 +23,7 @@ router.get('/:charName', async (req,res) => {
                 where: {
                     name: req.params.charName
                 },
-                include: [Move, Combo]
+                include: [Move, {model: Combo, order: [['id', 'DESC']]}]
             }
         );
         const rawCharData = charData.get({ plain:true });
