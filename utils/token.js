@@ -16,7 +16,7 @@ async function setKeys(){
 }
 
 async function getToken(data){
-    
+    console.log('Token created')
     //Get token
     const jwt = await new jose.SignJWT( 
         {metadata: data}
@@ -36,6 +36,7 @@ async function getToken(data){
 
 //Decrypts the passed in tokens
 async function decryptToken(token){
+    console.log('In decrypt token')
     const decryptedToken = await jose.jwtVerify(token, publicKey, {
         issuer,
         audience
