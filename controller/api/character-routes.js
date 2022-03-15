@@ -3,6 +3,7 @@ const {Character, Combo, Move} = require('../../model');
 
 //Get all characters from database
 router.get('/', async (req,res) => {
+    console.log('here')
     try {
         const charData = await Character.findAll();
         const rawCharData = charData.map(character => character.get({ plain:true }));

@@ -6,10 +6,14 @@ const token = require('./token')
 const withAuth = async (req, res, next) => {
   console.log('verifing Token')
   try {
-    console.log(req.body.token)
-    await token.decryptToken(req.body.token);
-    next();
+    console.log(req.headers.token)
+    if(req.headers.token){
+      await token.decryptToken(req.headers.token);
+      next();
+    }
   } catch (error) {
+    console.log(req)
+    console.log(error)
     res.redirect("/login");    
   }
 };
