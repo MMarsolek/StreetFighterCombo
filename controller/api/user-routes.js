@@ -2,6 +2,7 @@ const router = require('express').Router();
 const User = require('../../model/Users');
 const oAuth = require('../../utils/token');
 const auth = require('../../utils/auth');
+const { Combo }  = require('../../model');
 
 //Create new user
 router.post('/', async (req, res) => {
@@ -25,7 +26,6 @@ router.post('/', async (req, res) => {
 
 // User Login
 router.post('/login', async (req, res) => {
-
   try {
     const user = await User.findOne({
       where: {
@@ -66,6 +66,23 @@ try {
 }
 });
 
+// User Login
+router.get('/profile/:name', auth, async (req, res) => {
+  try {
+    const user = await User.findOne({
+      where: {
+        username: req.params.name,
+      },
+      include: {model: Combo, order: [[Combo, 'id', 'DESC']]}
+
+    });
+
+      res.json({ id : user.id, username: user.username, email: user.email, combos :user.combos });
+    } catch (err) {
+      console.log(err)
+    res.status(500).send({message: 'Cannot get data.'});
+  }
+});
   
 
 
