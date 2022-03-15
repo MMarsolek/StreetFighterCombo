@@ -81,11 +81,6 @@ router.get('/profile/:username', auth, async (req, res) => {
     console.log('user');
     console.log(user);
     user = user.dataValues;
-//     // Combos: [{…}]
-// email: "carterf.morfitt@gmail.com"
-// id: 11
-// password: "$2b$08$ICUkAkwbAtHYqw4GYFy0je1rSSBpk2G8iyGpNn3VHihHpkr.yCTau"
-// username: "carterfm"
     res.status(200).json({username: user.username, Combos: user.Combos, id: user.id});
     } catch (err) {
       console.log(err)
