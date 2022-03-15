@@ -68,23 +68,28 @@ try {
 }
 });
 
-// User Login
-router.get('/profile/:name', auth, async (req, res) => {
+// Get a single user
+router.get('/profile/:username', auth, async (req, res) => {
   try {
     let user = await User.findOne({
       where: {
-        username: req.params.name,
+        username: req.params.username,
       },
       include: [{model: Combo, order: [[Combo, 'id', 'DESC']], include: [Character]}]
-
     });
-    console.log('user')
-    console.log(user)
-      user = user.dataValues
-      res.json({ id : user.id, username: user.username, email: user.email, combos: user.combos });
+
+    console.log('user');
+    console.log(user);
+    user = user.dataValues;
+//     // Combos: [{…}]
+// email: "carterf.morfitt@gmail.com"
+// id: 11
+// password: "$2b$08$ICUkAkwbAtHYqw4GYFy0je1rSSBpk2G8iyGpNn3VHihHpkr.yCTau"
+// username: "carterfm"
+    res.status(200).json({username: user.username, Combos: user.Combos, id: user.id});
     } catch (err) {
       console.log(err)
-    res.status(500).send({message: 'Cannot get data.'});
+      res.status(500).send({message: 'Cannot get data.'});
   }
 });
   

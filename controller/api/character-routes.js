@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Character, Combo, Move} = require('../../model');
+const {Character, Combo, Move, User} = require('../../model');
 
 //Get all characters from database
 router.get('/', async (req,res) => {
@@ -24,7 +24,7 @@ router.get('/:charName', async (req,res) => {
                 where: {
                     name: req.params.charName
                 },
-                include: [Move, {model: Combo, order: [[Combo, 'id', 'DESC']]}]
+                include: [Move, {model: Combo, order: [[Combo, 'id', 'DESC']], include: [User]}]
             }
         );
         const rawCharData = charData.get({ plain:true });

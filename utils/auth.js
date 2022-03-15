@@ -12,9 +12,10 @@ const withAuth = async (req, res, next) => {
       next();
     }
   } catch (error) {
-    console.log(req)
-    console.log(error)
-    res.redirect("/login");    
+    console.log(req.headers);
+    console.log(error);
+    // TODO: this isn't working; fix   
+    res.status(401).end();
   }
 };
   
