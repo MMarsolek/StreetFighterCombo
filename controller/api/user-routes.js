@@ -2,6 +2,7 @@ const router = require('express').Router();
 const User = require('../../model/Users');
 const oAuth = require('../../utils/token');
 const auth = require('../../utils/auth');
+const { Combo, Character }  = require('../../model');
 
 //Create new user
 router.post('/', async (req, res) => {
@@ -25,8 +26,8 @@ router.post('/', async (req, res) => {
 
 // User Login
 router.post('/login', async (req, res) => {
-
   try {
+    console.log(req.body)
     const user = await User.findOne({
       where: {
         username: req.body.username,
@@ -47,6 +48,7 @@ router.post('/login', async (req, res) => {
 
       res.json({ userObj, token });
     } catch (err) {
+      console.log(err)
     res.status(500).send({message: 'Cannot login. Please try creating a new account'});
   }
 });
@@ -66,6 +68,25 @@ try {
 }
 });
 
+// User Login
+router.get('/profile/:name', auth, async (req, res) => {
+  try {
+    let user = await User.findOne({
+      where: {
+        username: req.params.name,
+      },
+      include: [{model: Combo, order: [[Combo, 'id', 'DESC']], include: [Character]}]
+
+    });
+    console.log('user')
+    console.log(user)
+      user = user.dataValues
+      res.json({ id : user.id, username: user.username, email: user.email, combos: user.combos });
+    } catch (err) {
+      console.log(err)
+    res.status(500).send({message: 'Cannot get data.'});
+  }
+});
   
 
 
