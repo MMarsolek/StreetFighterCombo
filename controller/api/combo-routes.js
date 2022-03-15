@@ -47,7 +47,8 @@ router.post('/', auth, async (req, res) => {
     // //  MoveId: the id of the move this combomove is associated with
     // //  stepNumber: this combo's step in the combo
     try {
-        const tokenData = JSON.parse(atob(req.body.token.split('.')[1]));
+        console.log(req)
+        const tokenData = JSON.parse(atob(req.headers.token.split('.')[1]));
         
         const newCombo = await Combo.create({
             title: req.body.title,
